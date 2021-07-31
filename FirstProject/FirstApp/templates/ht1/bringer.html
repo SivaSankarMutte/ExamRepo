@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BRINGER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body class="bg-dark">
+	<div class="container">
+		<div class="jumbotron bg-success my-5">
+			<form method="post" action="{% url 'output' %}"  class="needs-validation">
+				{% csrf_token %}
+				<div class="row">
+					<input type="text" class="form-control bg-dark col-md-3" style="color:white;" name="inp" placeholder="Enter the input here" required>
+					<input class="btn btn-sm btn-primary col-md-2" type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -12,7 +12,7 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+""" 
 from django.contrib import admin
 from django.urls import path
 from FirstApp import views
@@ -34,5 +34,18 @@ urlpatterns = [
     path('myform2/',views.myform2,name='myform2'),
     path('login/',views.login,name='login'),
     path('btstrp/',views.bootstrapfun),
+    path('btrg/',views.btregi,name="btr"),
+    path('sankar/',views.sankarfun),
+    path('bringer/',views.bringerfun,name="output"),
+    path('songs/',views.PlayList,name="songs"),
+    path('tour/',views.TourFun),
+    path('register1/',views.register1),
+    path('register2/',views.register2,name="register2"),
+    path('display/',views.display,name="display"),
+    path('viw/<int:y>/',views.sview,name="sv"),
+    path('update/<int:y>/',views.updateFun,name="update"),
+    path('delete/<int:y>/',views.deleteFun,name="delete"),
+    path('saveDetails/<int:y>/',views.saveDetails,name="saveDetails"),
+    
 
-]
+] 

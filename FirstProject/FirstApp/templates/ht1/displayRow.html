@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Row Details</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script></head>
+<body>
+	<div class="jumbotron">
+		<h1>User id:{{row.id}}</h1>
+		<h1>Name of User:{{row.name}}</h1>
+		<h1>User Email is:{{row.email}}</h1>
+		<a href="{% url 'display' %}" class="btn btn-success">Back</a>
+	</div>
+</body>
+</html>

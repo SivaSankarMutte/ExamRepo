@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PlayList</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<img src="{% static 'images/red.jpg' %}"  style="widht: auto;height: auto;" class="img-fluid rounded"> 
+			</div>
+			<div class="row">
+				<h2>Song Name</h2>
+			</div>
+			<div class="jumbotron bg-dark">
+				<audio controls style="width: 100%;">
+					<source src="{% static 'audio/maguva.mp3' %}" type="audio/mpeg">
+				</audio>
+				<form method="post" action="{% url 'songs' %}">
+					{% csrf_token %}
+					<div class="text-center" style="color:white;">
+						<input type="submit" name="<" value="<" class="btn btn-success mx-1">
+						<input type="submit" name=">" value=">" class="btn btn-success mx-1">
+
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

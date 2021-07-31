@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PlayList</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'jquery/jquery-3.6.0.min.js' %}"></script>
+
+	</head> 
+	<body>
+		<span class="d-block bg-dark text-right">
+			<a href="#" class="btn btn-outline-warning">Add Song</a>
+		</span>
+		<table class="table table-bordered table-hover">
+			<thead class="bg-dark text-light">
+				<td>Album</td>
+				<td>Song Name</td>
+				<td>PlayList</td>
+				<td>Actions</td>
+			<thead>
+			{% for row  in data %}
+				<tr>
+					<td><img src="/media/{{row.album}}" style="width: auto;height: 50px;" class="img-fluid rounded shadow-lg mx-auto d-block"></td>
+					<td>{{row.song}}</td>
+					<td class="bg-dark">
+						<audio class="form-controls bg-info" controls style="width: 600px;">
+							<source class="form-controls bg-info" src="/media/{{row.song}}" type="audio/mpeg">
+						</audio>
+					</td>
+					<td>
+						<a href="#" class="btn btn-outline-info">view</a>
+						<a href="#" class="btn btn-outline-success">update</a>
+						<a href="#" class="btn btn-outline-danger">delete</a>
+					</td>
+				</tr>
+			{% endfor %} 
+		</table>
+
+	</body>
+</html>

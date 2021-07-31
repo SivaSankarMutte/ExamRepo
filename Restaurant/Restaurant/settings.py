@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hhcdm8cfrs)=p0-arrw)4uh+qho=koa_ybw!1u9r(n0vrl(6ze'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -80,8 +80,13 @@ WSGI_APPLICATION = 'Restaurant.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'rest',
+        'USER': 'root',
+        'PASSWORD':'',
+        'HOST':'',
+        'PORT':'',
+
     }
 }
 
@@ -116,13 +121,15 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 MEDIA_URL='/images/'
 
@@ -142,5 +149,7 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
 EMAIL_HOST_USER='sivasankarmutte@gmail.com'
 EMAIL_HOST_PASSWORD="K@lmno@123"
+
+
 
 django_heroku.settings(locals())

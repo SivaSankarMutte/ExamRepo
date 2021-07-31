@@ -1,0 +1,20 @@
+{% load static %}
+<nav class="navbar navbar-expand bg-dark navbar-dark" id="navbar">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="{% url 'home' %}">
+    <img src="{% static 'images/Wynklogo-white.svg' %}" alt="logo" style="width:150px;">
+  </a>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <li class="nav-item">
+        <a class="nav-link text-light" style="font-weight: 600" href="{% url 'home' %}">HOME</a>
+      </li>
+  </div>
+</nav>
+
+

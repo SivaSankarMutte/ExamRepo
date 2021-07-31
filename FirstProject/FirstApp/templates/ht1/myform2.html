@@ -13,15 +13,15 @@
 	<fieldset>
 		<div class="jumbotron">
 			<legend><h1>Registration Form</h1></legend>
-			<form action="{% url 'myform2' %}" method="post" class="was-validated">
+			<form action="{% url 'myform2' %}" method="post" class="needs-validation">
 			{% csrf_token %}
 				<div class="form-group">
 					<label for="fname">Enter First Name</label>
-					<input type="text" class="form-control" name="fname" id="fname">
+					<input type="text" class="form-control" name="fname" id="fname" required>
 				</div>
 				<div class="form-group">
 					<label for="lname">Enter Last Name</label>
-					<input type="text" class="form-control" name="lname" id="lname">
+					<input type="text" class="form-control" name="lname" id="lname" required>
 				</div>
 				
 				<div class="form-group">
@@ -38,8 +38,8 @@
 							<input type="radio" name="gender" class="form-control-radio" value="Female">Female
 				</div>
 				<div class="form-group">		
-							<label>Enter Full Address</label>
-							<td><textarea name="address" class="form-control" rows="5" cols="50"></textarea></td>
+							<label for="address">Enter Full Address</label>
+							<td><textarea name="address" class="form-control" rows="5" cols="50" id="address"></textarea></td>
 				</div>
 				<div class="form-group">
 					<label>Select Languages known</label><br>

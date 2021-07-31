@@ -2,44 +2,37 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Registration Form Details</title>
-	<style>
-		body
-		{
-			background-color: darkmagenta;
-		}
-		th{
-			background-color: black;
-			text-decoration-color: red;
-			color: white;
-		}
-		td{
-			background-color: green;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Registration Form Details</title>	
 </head>
 <body>
-	<table border="1">
-		<thead>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Email</th>
-			<th>Phone No</th>
-			<th>Gender</th>
-			<th>Address</th>
-			<th>Languages Known</th>
-			<th>Favourite Sport</th>
-		</thead>
+	<div class="container jumbotron">
+		<h1>Registration Details</h1>
+		<div class="row">
+			<div class="col-sm-1 bg-success">First Name</div>
+			<div class="col-sm-1 bg-success">Last Name</div>
+			<div class="col-sm-2 bg-success">Email</div>
+			<div class="col-sm-1 bg-success">Phone No</div>
+			<div class="col-sm-1 bg-success">Gender</div>
+			<div class="col-sm-2 bg-success">Address</div>
+			<div class="col-sm-2 bg-success">Languages Known</div>
+			<div class="col-sm-1 bg-success">Favourite Sport</div>	
+		</div>
 
-		<tbody>
-			<td>{{fname}}</td>
-			<td>{{lname}}</td>
-			<td>{{email}}</td>
-			<td>{{phoneno}}</td>
-			<td>{{gender}}</td>
-			<td>{{address}}</td>
-			<td>{{languages}}</td>
-			<td>{{sport}}</td>
-	</table>
+		<div class="row">
+			<div class="col-sm-1 bg-info">{{fname}}</div>
+			<div class="col-sm-1 bg-info">{{lname}}</div>
+			<div class="col-sm-2 bg-info">{{email}}</div>
+			<div class="col-sm-1 bg-info">{{phoneno}}</div>
+			<div class="col-sm-1 bg-info">{{gender}}</div>
+			<div class="col-sm-2 bg-info">{{address}}</div>
+			<div class="col-sm-2 bg-info">{{languages}}</div>
+			<div class="col-sm-1 bg-info">{{sport}}</div>
+		</div>
+	</div>
 </body>
 </html>

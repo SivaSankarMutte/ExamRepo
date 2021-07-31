@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Updating a Row</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script></head>
+</head>
+<body>
+
+	<!--
+	<div>
+		<form action="{% url 'saveDetails' row.id %}" method="POST">
+			{% csrf_token %}
+			<input type="text" name="name" value="{{row.name}}">
+			<input type="email" name="email" value="{{row.email}}">
+			<input type="submit" value="UPDATE" class="btn btn-success">
+		</form>
+	</div>
+-->
+
+	<div class="container mt-4">
+		<div class="card col-md-6 mx-auto">
+			<div class="card-body">
+				<h3>Single User Update</h3>
+				<form action="{% url 'update' row.id %}" method="post">
+					{% csrf_token %}
+					<input type="text" class="form-control" name="name" value="{{row.name}}">
+					<input type="email" class="form-control" name="email" value="{{row.email}}">
+
+					<div class="row">
+						<div class="col">
+							<a href="{% url 'display' %}" class="btn btn-outline-danger col-sm my-2 form-control">Back</a>
+						</div>
+						<div class="col">
+							<input type="submit" value="UPDATE" class="btn btn-outline-success col-sm my-2 form-control">
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

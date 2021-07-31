@@ -27,7 +27,7 @@ SECRET_KEY = '0ekxbg5vslcc%^=$*(1w(@c7ycz76fzg^$b*m8ers5-5c6@0)%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://git.heroku.com/greenmusic.git','localhost','127.0.0.1']
 
 
 # Application definition
